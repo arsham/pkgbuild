@@ -10,3 +10,6 @@
 [submodule "sources/aur/htop-git"]
 	path = sources/aur/htop-git
 	url = https://aur.archlinux.org/htop-git.git
+[submodule "sources/aur/tmux-git"]
+	path = sources/aur/tmux-git
+	url = https://aur.archlinux.org/tmux-git.git

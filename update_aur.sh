@@ -7,6 +7,7 @@ paths=(
   alacritty-git
   awesome-luajit-git
   htop-git
+  tmux-git
 )
 
 for package in ${paths[@]}; do
