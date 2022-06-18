@@ -6,6 +6,7 @@ asp update
 declare -A paths
 paths=(
   ["cairo"]=extra/cairo
+  ["cairomm"]=extra/cairomm
 )
 
 for path in ${!paths[@]}; do
