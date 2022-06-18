@@ -6,6 +6,7 @@ paths=(
   neovim-git
   alacritty-git
   awesome-luajit-git
+  htop-git
 )
 
 for package in ${paths[@]}; do

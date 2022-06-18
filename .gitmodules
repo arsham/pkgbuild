@@ -7,3 +7,6 @@
 [submodule "sources/aur/awesome-luajit-git"]
 	path = sources/aur/awesome-luajit-git
 	url = https://aur.archlinux.org/awesome-luajit-git.git
+[submodule "sources/aur/htop-git"]
+	path = sources/aur/htop-git
+	url = https://aur.archlinux.org/htop-git.git
