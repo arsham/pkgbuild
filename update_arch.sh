@@ -11,6 +11,7 @@ paths=(
   ["gtk2"]=extra/gtk2
   ["gtk3"]=extra/gtk3
   ["gtkmm3"]=extra/gtkmm3
+  ["libxml2"]=core/libxml2
 )
 
 for path in ${!paths[@]}; do
