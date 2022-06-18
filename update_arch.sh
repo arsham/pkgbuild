@@ -7,6 +7,7 @@ declare -A paths
 paths=(
   ["cairo"]=extra/cairo
   ["cairomm"]=extra/cairomm
+  ["dbus"]=core/dbus
 )
 
 for path in ${!paths[@]}; do
