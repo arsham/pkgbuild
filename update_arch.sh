@@ -14,6 +14,7 @@ paths=(
   ["libxml2"]=core/libxml2
   ["luajit"]=community/luajit
   ["nload"]=community/nload
+  ["xdg-utils"]=extra/xdg-utils
 )
 
 for path in ${!paths[@]}; do

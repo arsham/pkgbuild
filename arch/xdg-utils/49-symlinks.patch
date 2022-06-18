@@ -1,0 +1,43 @@
+From b937642a1013b7dcf122a5a0229f3e59b93e4aee Mon Sep 17 00:00:00 2001
+From: hnicke <dev@hnicke.de>
+Date: Sat, 29 Jan 2022 11:04:18 +0100
+Subject: [PATCH] If mimeapps.list is a symlink, retain the symlink
+
+Resolves #7
+---
+ scripts/xdg-mime.in | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/xdg-mime.in b/scripts/xdg-mime.in
+index 612d2ce..e8e12f3 100644
+--- a/scripts/xdg-mime.in
++++ b/scripts/xdg-mime.in
+@@ -247,9 +247,14 @@ make_default_generic()
+     xdg_config_home="$XDG_CONFIG_HOME"
+     [ -n "$xdg_config_home" ] || xdg_config_home="$HOME/.config"
+     default_file="$xdg_config_home/mimeapps.list"
++    if [ -L "$default_file" ]; then
++        out_file=$(readlink -f "$default_file")
++    else
++        out_file="$default_file"
++    fi
+     DEBUG 2 "make_default_generic $1 $2"
+-    DEBUG 1 "Updating $default_file"
+-    [ -f "$default_file" ] || touch "$default_file"
++    DEBUG 1 "Updating $out_file"
++    [ -f "$out_file" ] || touch "$out_file"
+     awk -v mimetype="$2" -v application="$1" '
+     BEGIN {
+         prefix=mimetype "="
+@@ -297,7 +302,7 @@ make_default_generic()
+             blanks--
+         }
+     }
+-' "$default_file" > "${default_file}.new" && mv "${default_file}.new" "$default_file"
++' "$out_file" > "$out_file.new" && mv "$out_file.new" "$out_file"
+ }
+ 
+ search_desktop_file()
+-- 
+GitLab
+
