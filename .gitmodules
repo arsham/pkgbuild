@@ -4,3 +4,6 @@
 [submodule "sources/aur/alacritty-git"]
 	path = sources/aur/alacritty-git
 	url = https://aur.archlinux.org/alacritty-git.git
+[submodule "sources/aur/awesome-luajit-git"]
+	path = sources/aur/awesome-luajit-git
+	url = https://aur.archlinux.org/awesome-luajit-git.git
