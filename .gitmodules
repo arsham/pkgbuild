@@ -19,3 +19,6 @@
 [submodule "sources/aur/zsh-git"]
 	path = sources/aur/zsh-git
 	url = https://aur.archlinux.org/zsh-git.git
+[submodule "sources/aur/picom-git"]
+	path = sources/aur/picom-git
+	url = https://aur.archlinux.org/picom-git.git

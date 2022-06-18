@@ -10,6 +10,7 @@ paths=(
   tmux-git
   vifm-git
   zsh-git
+  picom-git
 )
 
 for package in ${paths[@]}; do
