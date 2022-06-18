@@ -1,3 +1,6 @@
 [submodule "sources/aur/neovim-git"]
 	path = sources/aur/neovim-git
 	url = https://aur.archlinux.org/neovim-git.git
+[submodule "sources/aur/alacritty-git"]
+	path = sources/aur/alacritty-git
+	url = https://aur.archlinux.org/alacritty-git.git

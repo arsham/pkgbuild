@@ -4,6 +4,7 @@ git submodule update --recursive --remote --merge
 
 paths=(
   neovim-git
+  alacritty-git
 )
 
 for package in ${paths[@]}; do
