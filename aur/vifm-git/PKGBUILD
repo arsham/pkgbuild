@@ -1,0 +1,54 @@
+# Maintainer: Jose Riha <jose1711 gmail com>
+# Contributor: Dennis Hamester <dennis.hamester@startmail.com>
+# Contributor: rafasc
+# Contributor: willemw
+
+_pkgname=vifm
+pkgname=$_pkgname-git
+pkgver=0.12.r266.g925e873bd
+pkgrel=1
+pkgdesc="Ncurses based file manager with vi like keybindings"
+arch=('i686' 'x86_64')
+url="http://vifm.info/"
+license=('GPL')
+depends=('ncurses' 'desktop-file-utils')
+makedepends=('git' 'perl')
+conflicts=('vifm')
+provides=('vifm')
+source=("git+https://github.com/vifm/vifm.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "${srcdir}"/$_pkgname
+    git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/v//g'
+}
+
+prepare() {
+  # Packages required by vifm.
+  yay -S --noconfirm --needed \
+    zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps \
+    python-pdftotext \
+    gv \
+    apvlv \
+    mplayer \
+    mp3info \
+    mpv-git \
+    ristretto \
+    ark \
+    docx2txt \
+    pcmanfm-git \
+    shellpic \
+    dragon-drop
+}
+
+build() {
+    cd "${srcdir}"/$_pkgname
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc
+    make
+}
+
+package() {
+    cd "${srcdir}"/$_pkgname
+    make DESTDIR="${pkgdir}" install
+}

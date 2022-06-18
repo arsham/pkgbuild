@@ -8,6 +8,7 @@ paths=(
   awesome-luajit-git
   htop-git
   tmux-git
+  vifm-git
 )
 
 for package in ${paths[@]}; do
