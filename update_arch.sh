@@ -12,6 +12,7 @@ paths=(
   ["gtk3"]=extra/gtk3
   ["gtkmm3"]=extra/gtkmm3
   ["libxml2"]=core/libxml2
+  ["luajit"]=community/luajit
 )
 
 for path in ${!paths[@]}; do
