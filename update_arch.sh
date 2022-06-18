@@ -10,6 +10,7 @@ paths=(
   ["dbus"]=core/dbus
   ["gtk2"]=extra/gtk2
   ["gtk3"]=extra/gtk3
+  ["gtkmm3"]=extra/gtkmm3
 )
 
 for path in ${!paths[@]}; do
