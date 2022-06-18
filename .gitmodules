@@ -16,3 +16,6 @@
 [submodule "sources/aur/vifm-git"]
 	path = sources/aur/vifm-git
 	url = https://aur.archlinux.org/vifm-git.git
+[submodule "sources/aur/zsh-git"]
+	path = sources/aur/zsh-git
+	url = https://aur.archlinux.org/zsh-git.git

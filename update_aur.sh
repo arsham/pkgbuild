@@ -9,6 +9,7 @@ paths=(
   htop-git
   tmux-git
   vifm-git
+  zsh-git
 )
 
 for package in ${paths[@]}; do
