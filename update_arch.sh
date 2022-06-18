@@ -15,6 +15,7 @@ paths=(
   ["luajit"]=community/luajit
   ["nload"]=community/nload
   ["xdg-utils"]=extra/xdg-utils
+  ["xorg-server"]=extra/xorg-server
 )
 
 for path in ${!paths[@]}; do
