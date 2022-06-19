@@ -1,21 +1,19 @@
 #!/bin/bash
 
 yay -Syu --noconfirm --needed \
-        zoxide-git \
-        upower-git \
-        sddm-config-editor-git \
-        powerline-fonts-git \
-        nvtop-git \
-        numix-icon-theme-git \
-        numix-circle-icon-theme-git \
-        numix-circle-arc-icons-git \
-        mpv-git \
-        gimp-plugin-resynthesizer-git \
-        fontpreview-ueberzug-git \
-        findutils-git \
         dell-bios-fan-control-git \
-        ananicy-git \
-        ananicy-cpp-git
+        findutils-git \
+        fontpreview-ueberzug-git \
+        gimp-plugin-resynthesizer-git \
+        mpv-git \
+        numix-circle-arc-icons-git \
+        numix-circle-icon-theme-git \
+        numix-icon-theme-git \
+        nvtop-git \
+        powerline-fonts-git \
+        sddm-config-editor-git \
+        upower-git \
+        zoxide-git
 
 yay -Syu --noconfirm --needed \
         alltray \
@@ -113,6 +111,7 @@ yay -Syu --noconfirm --needed \
         moreutils \
         mplayer \
         ncdu \
+        nerd-fonts-complete \
         net-tools \
         network-manager-applet \
         networkmanager \
@@ -138,6 +137,7 @@ yay -Syu --noconfirm --needed \
         openvpn \
         optimus-manager \
         optimus-manager-qt \
+        pacutils \
         papirus-icon-theme \
         parallel \
         parted \
@@ -216,8 +216,7 @@ yay -Syu --noconfirm --needed \
         zip \
         zlib \
         zsh-completions \
-        zsh-syntax-highlighting \
-        nerd-fonts-complete
+        zsh-syntax-highlighting
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable ananicy-cpp.service

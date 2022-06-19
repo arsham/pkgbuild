@@ -1,0 +1,3 @@
+# https://golang.org/
+{ "name": "go", "type": "BG_CPUIO" }
+{ "name": "gopls", "ionice": -4, "nice": -4, "type": "LSP" },

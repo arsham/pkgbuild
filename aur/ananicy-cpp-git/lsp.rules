@@ -1,0 +1,3 @@
+{ "name": "gopls", "type": "LSP", "nice":-4, "ionice":-4 }
+{ "name": "golangci-lint", "type": "LSP", "nice":-2 }
+{ "name": "lua-language-server", "type": "LSP", "nice":-2 }

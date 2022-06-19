@@ -22,3 +22,6 @@
 [submodule "sources/aur/picom-git"]
 	path = sources/aur/picom-git
 	url = https://aur.archlinux.org/picom-git.git
+[submodule "sources/aur/ananicy-cpp-git"]
+	path = sources/aur/ananicy-cpp-git
+	url = https://aur.archlinux.org/ananicy-cpp-git.git

@@ -11,6 +11,7 @@ paths=(
   vifm-git
   zsh-git
   picom-git
+  ananicy-cpp-git
 )
 
 for package in ${paths[@]}; do
