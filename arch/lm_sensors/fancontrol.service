@@ -1,0 +1,14 @@
+[Unit]
+Description=Start fan control, if configured
+ConditionFileNotEmpty=/etc/fancontrol
+After=lm_sensors.service
+
+[Service]
+Type=simple
+PIDFile=/run/fancontrol.pid
+ExecStart=/usr/sbin/fancontrol
+Restart=on-failure
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
