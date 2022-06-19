@@ -1,5 +1,2 @@
-*
-!.gitignore
-!PKGBUILD
-!*.install
-!.SRCINFO
+neovim-git/
+*.patch
