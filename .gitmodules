@@ -25,3 +25,6 @@
 [submodule "sources/aur/ananicy-cpp-git"]
 	path = sources/aur/ananicy-cpp-git
 	url = https://aur.archlinux.org/ananicy-cpp-git.git
+[submodule "sources/aur/zoxide-git"]
+	path = sources/aur/zoxide-git
+	url = https://aur.archlinux.org/zoxide-git.git
