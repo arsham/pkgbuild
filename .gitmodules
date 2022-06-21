@@ -28,3 +28,6 @@
 [submodule "sources/aur/zoxide-git"]
 	path = sources/aur/zoxide-git
 	url = https://aur.archlinux.org/zoxide-git.git
+[submodule "sources/aur/keyd-git"]
+	path = sources/aur/keyd-git
+	url = https://aur.archlinux.org/keyd-git.git
