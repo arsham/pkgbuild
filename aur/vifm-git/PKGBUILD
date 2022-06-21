@@ -5,13 +5,31 @@
 
 _pkgname=vifm
 pkgname=$_pkgname-git
-pkgver=0.12.r216.g85a70df1b
-pkgrel=2
+pkgver=0.12.r273.g515b837e3
+pkgrel=1
 pkgdesc="Ncurses based file manager with vi like keybindings"
 arch=('i686' 'x86_64')
 url="http://vifm.info/"
 license=('GPL')
 depends=('ncurses' 'desktop-file-utils')
+optdepends=(
+  'apvlv: PDF/DJVU/TXT viewer'
+  'ark: Archiving Tool'
+  'docx2txt: Recovers text from DOCX files'
+  'dragon-drop: Simple drag-and-drop source/sink'
+  'gv: View PostScript and PDF documents'
+  'mp3info: An MP3 technical info viewer'
+  'mplayer: Media player for Linux'
+  'mpv-git: Video player based on MPlayer/mplayer2'
+  'pcmanfm-git: Extremely fast and lightweight file manager'
+  'python-pdftotext: Simple PDF text extraction'
+  'ristretto: Picture viewer'
+  'zathura: Minimalistic document viewer'
+  'zathura-cb: Adds comic book support to zathura'
+  'zathura-djvu: DjVu support for Zathura'
+  'zathura-pdf-poppler: Adds pdf support to zathura'
+  'zathura-ps: Adds ps support to zathura'
+)
 makedepends=('git' 'perl')
 conflicts=('vifm')
 provides=('vifm')
@@ -21,24 +39,6 @@ sha256sums=('SKIP')
 pkgver() {
     cd "${srcdir}"/$_pkgname
     git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/v//g'
-}
-
-prepare() {
-  # Packages required by vifm.
-  yay -S --noconfirm --needed \
-    zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps \
-    python-pdftotext \
-    gv \
-    apvlv \
-    mplayer \
-    mp3info \
-    mpv-git \
-    ristretto \
-    ark \
-    docx2txt \
-    pcmanfm-git \
-    shellpic \
-    dragon-drop
 }
 
 build() {
