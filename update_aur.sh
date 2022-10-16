@@ -26,21 +26,13 @@ for package in ${paths[@]}; do
       fi
   fi
 
-  makepkg -si --noconfirm
+  BUILDDIR=/tmp/makepkg makepkg -si --noconfirm
   if [ $? -ne 0 ]; then
     echo Error building $package
+      sudo rm --interactive=never -rf /tmp/makepkg/*
     exit 1
   fi
-
-  cp ../../sources/aur/$package/* ./
-  if [ $? -ne 0 ]; then
-    exit 1
-  fi
-
-  git diff --quiet .
-  if [ $? -ne 0 ]; then
-    notify-send -t 5000 $package "remote was changed"
-  fi
+  sudo rm --interactive=never -rf /tmp/makepkg/*
 
   popd
 done
