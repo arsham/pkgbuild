@@ -16,7 +16,6 @@ paths=(
   ["nload"]=community/nload
   ["xdg-utils"]=extra/xdg-utils
   ["xorg-server"]=extra/xorg-server
-  ["lm_sensors"]=extra/lm_sensors
 )
 
 for path in ${!paths[@]}; do
