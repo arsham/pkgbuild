@@ -22,9 +22,6 @@
 [submodule "sources/aur/picom-git"]
 	path = sources/aur/picom-git
 	url = https://aur.archlinux.org/picom-git.git
-[submodule "sources/aur/ananicy-cpp-git"]
-	path = sources/aur/ananicy-cpp-git
-	url = https://aur.archlinux.org/ananicy-cpp-git.git
 [submodule "sources/aur/zoxide-git"]
 	path = sources/aur/zoxide-git
 	url = https://aur.archlinux.org/zoxide-git.git
@@ -34,3 +31,6 @@
 [submodule "sources/aur/gimp-develop-git"]
 	path = sources/aur/gimp-develop-git
 	url = https://aur.archlinux.org/gimp-develop-git.git
+[submodule "sources/aur/ananicy-git"]
+	path = sources/aur/ananicy-git
+	url = https://aur.archlinux.org/ananicy-git.git

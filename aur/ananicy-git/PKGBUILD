@@ -1,0 +1,47 @@
+# Maintainer: Timofey Titovets <nefelim4ag@gmail.com>
+
+pkgname=ananicy-git
+pkgver=2.2.1.r68.g300a0c8
+pkgrel=1
+pkgdesc="Ananicy - is Another auto nice daemon, with community rules support"
+arch=('any')
+url="https://github.com/Nefelim4ag/Ananicy.git"
+license=('GPL3')
+depends=('systemd' 'bash' 'schedtool')
+makedepends=('git' 'make')
+source=(
+  "$pkgname"::'git+https://github.com/Nefelim4ag/Ananicy.git#branch=master'
+  "fzf.rules"
+  "go.rules"
+  "lsp.rules"
+  "nload.rules"
+  "rofi.rules"
+)
+md5sums=(
+  'SKIP'
+  'SKIP'
+  'SKIP'
+  'SKIP'
+  'SKIP'
+  'SKIP'
+)
+install=$pkgname.install
+provides=(ananicy)
+backup=( 'etc/ananicy.d/ananicy.conf' )
+
+pkgver() {
+  cd "$pkgname"
+  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+package() {
+  cd "$srcdir/${pkgname}/"
+  make install PREFIX="$pkgdir"
+  mkdir -p "$pkgdir/usr/"
+  mv -v "$pkgdir/lib" "$pkgdir/usr/"
+  cp ../fzf.rules   "$pkgdir/etc/ananicy.d/00-default/"
+  cp ../go.rules    "$pkgdir/etc/ananicy.d/00-default/"
+  cp ../lsp.rules   "$pkgdir/etc/ananicy.d/00-default/"
+  cp ../nload.rules "$pkgdir/etc/ananicy.d/00-default/"
+  cp ../rofi.rules  "$pkgdir/etc/ananicy.d/00-default/"
+}
